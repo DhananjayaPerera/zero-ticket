@@ -137,3 +137,35 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# frontend build + deps
+app/node_modules/
+app/dist/
+*.log
+
+# python env & caches
+.venv/
+__pycache__/
+*.py[cod]
+
+# data & models (keep large files out of git)
+ml/data/raw/*
+!ml/data/raw/README.md      # keep a tiny placeholder so folder exists
+ml/data/interim/
+ml/data/processed/
+ml/data/external/           # <- add this (live pulls / API dumps)
+ml/models/
+
+# notebooks metadata
+ml/notebooks/.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# editor/OS noise
+.vscode/
+.DS_Store
+*.swp
+
+# env files (if you add any later)
+.env
+.env.*
+
